@@ -1,0 +1,26 @@
+html{
+
+    background-color: blueviolet
+    ;
+}
+
+.div-pai{
+
+    border: 2px solid black;
+    height: 400px;
+    display: flex;
+    align-items: center; /*eixo Y */
+    gap: 4px;
+    flex-direction: column;
+    justify-content: center ; /*eixo x*/ 
+
+}
+
+.div-filho{
+
+border: 2px solid red;
+width: 120px;
+height: 120px;
+background-color: tomato;
+
+}
