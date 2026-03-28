@@ -13,7 +13,8 @@
   padding: 20px;
 }
 
-@media (min-width: 768px) {
+  @media (min-width: 768px) {   /* tamanho de tela diferentes   */
+
   .container {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
@@ -24,7 +25,7 @@
 }
 
 
-nav ul {
+ nav ul {           /* links de navegação */
   display: flex;
   gap: 20px; 
   list-style: none;
