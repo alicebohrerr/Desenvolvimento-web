@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;   
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#container-2 {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.titulo-roxo {
+    color: #6a1b9a;
+    text-align: center;
+}
+
+ul {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+    background: #eee;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+li:hover {
+    background: #ffcdd2; /* Cor de destaque ao passar o mouse para deletar */
+}
