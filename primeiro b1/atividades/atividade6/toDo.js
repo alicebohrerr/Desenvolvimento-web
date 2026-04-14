@@ -4,7 +4,7 @@ const input = document.querySelector('#tarefa');
 const btnCriar = document.querySelector('#meuBotão');
 const lista = document.querySelector('#lista');
 
-// Configuração inicial
+
 titulo.textContent = "MINHA LISTA DE TAREFAS";
 titulo.classList.add('titulo-roxo');
 
@@ -12,7 +12,7 @@ titulo.classList.add('titulo-roxo');
 btnCriar.addEventListener('click', function () {
     const tarefaTexto = input.value.trim(); // Remove espaços extras
 
-    // Validação: não deixa adicionar se o campo estiver vazio
+    //  não deixa adicionar se o campo estiver vazio
     if (tarefaTexto === "") {
         alert("Por favor, digite uma tarefa!");
         return;
@@ -22,16 +22,16 @@ btnCriar.addEventListener('click', function () {
     const novoItem = document.createElement('li');
     novoItem.textContent = tarefaTexto;
 
-    // Adiciona o item à lista (ul)
+    // Adiciona o item à lista 
     lista.appendChild(novoItem);
 
-    // Limpa o input e volta o foco para ele
+    // Limpa o input
     input.value = '';
     input.focus();
 });
 
-// Evento para remover tarefa (Delegação de evento)
-// Este evento fica de "guarda" na lista e apaga o item que for clicado
+//  remove tarefa 
+
 lista.addEventListener('click', function (event) {  
     if (event.target.tagName === 'LI') {
         event.target.remove();
