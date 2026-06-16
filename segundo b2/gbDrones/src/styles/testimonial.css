@@ -1,0 +1,31 @@
+#testimonials {
+  padding-block: 4rem;
+}
+
+#testimonials header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.carousel-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.carousel-card {
+  background: var(--light-gray);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: rgba(58, 68, 78, 0.15) 0px 6px 12px;
+}
+
+.names {
+  margin-top: 1rem;
+  font-weight: var(--fw-bold);
+}
+
+@media (width >= 1280px) {
+  .carousel-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

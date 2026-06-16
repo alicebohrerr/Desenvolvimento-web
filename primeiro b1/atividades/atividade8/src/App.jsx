@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 function App() {
-  // Estado da lista de tarefas
+ 
   const [tarefas, setTarefas] = useState([]);
 
-  // Estado do input
+  
   const [input, setInput] = useState("");
 
-  // Adicionar tarefa
+  
   function adicionarTarefa(e) {
     e.preventDefault();
 
