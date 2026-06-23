@@ -15,13 +15,37 @@ import "../styles/pricing.css";
 import "../styles/contact.css";
 import "../styles/testimonial.css";
 import "../styles/footer.css";
-
+import Cliente1 from "../assets/images/cliente01.jpg";
+import Cliente2 from "../assets/images/cliente02.jpg";
+import Cliente3 from "../assets/images/cliente03.jpg";
+import facebook from "../assets/facebook.svg";
+import Card from "../components/card";
 
 
 
 export default function Home() {
     
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    // Valores para capturar dados dos inputs
+const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+
+async function sendContactEmail() {
+  const response = await fetch("/api/send-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+		    email,
+		    message
+    }),
+  });
+
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body.error ?? "Erro ao enviar mensagem.");
+  }
+}
 
     return (
         <>
@@ -140,42 +164,24 @@ export default function Home() {
             rápidas e precisas.
         </p>
     </header>
-<section className="even-columns solutions-cards">
+    
+<Card
+    icon="🚁"
+    title="Aplicação de Defensivos"
+    description="Pulverização precisa e uniforme, reduzindo desperdícios e aumentando a eficiência da aplicação."
+/>
 
-    <div className="card">
-        <span className="card-icon">🚁</span>
+<Card
+    icon="🌱"
+    title="Dispersão de Sólidos"
+    description="Distribuição rápida e homogênea para diferentes culturas e necessidades do produtor."
+/>
 
-        <h3>Aplicação de Defensivos</h3>
-
-        <p>
-            Pulverização precisa e uniforme, reduzindo desperdícios
-            e aumentando a eficiência da aplicação.
-        </p>
-    </div>
-
-    <div className="card">
-        <span className="card-icon">🌱</span>
-
-        <h3>Dispersão de Sementes</h3>
-
-        <p>
-            Distribuição rápida e homogênea para diferentes culturas
-            e necessidades do produtor.
-        </p>
-    </div>
-
-    <div className="card">
-        <span className="card-icon">📊</span>
-
-        <h3>Análise de Dados</h3>
-
-        <p>
-            Monitoramento da lavoura com informações precisas para
-            auxiliar na tomada de decisões.
-        </p>
-    </div>
-
-</section>
+<Card
+    icon="📊"
+    title="Análise de Dados"
+    description="Monitoramento da lavoura com informações precisas para auxiliar na tomada de decisões."
+/>
 </section>
 
 <section id="testimonials">
@@ -202,18 +208,21 @@ export default function Home() {
          
 
          <TestimonialCard
+    image={Cliente1}
     name="Carlos Silva"
     role="Produtor Rural"
     text="A aplicação ficou muito mais uniforme e reduziu significativamente nosso desperdício."
 />
 
 <TestimonialCard
+    image={Cliente2}
     name="Marcos Almeida"
     role="Agricultor"
     text="Serviço rápido, seguro e com excelente cobertura."
 />
 
 <TestimonialCard
+    image={Cliente3}
     name="João Ferreira"
     role="Produtor de Soja"
     text="A produtividade aumentou e tivemos economia de insumos."
@@ -272,7 +281,7 @@ export default function Home() {
                 <h3>Premium</h3>
 
                 <p>
-                    Aplicação agrícola com drones para qualquer cultura.
+                    Aplicação e dispersão agrícola com drones para culturas em geral.
                 </p>
             </span>
 
@@ -289,7 +298,7 @@ export default function Home() {
             </span>
 
             <span className="features">
-                <p>✔ Redução de desperdícios</p>
+                <p>✔ Redução na perca de insumos</p>
             </span>
 
             <span className="features">
@@ -334,36 +343,36 @@ export default function Home() {
 
 </section>
 
-<footer className="footer">
 
-    <div className="container">
-
-        <h3>NG DRONES</h3>
-
-        <p>
-            Tecnologia e precisão para sua lavoura.
-        </p>
-
-    </div>
-
-</footer>
 
 <footer className="footer">
 
-    <div className="container footer-content">
+<div className="container footer-content">
 
-        <div className="footer-brand">
-            <h3>NG DRONES</h3>
+                    <div className="footer-brand">
+                        <img className="footer-logo" src={Logo} alt="Logo NgDrones" width={140} height={48} />
 
-            <p>
-                Tecnologia e precisão para aplicações agrícolas com drones.
-            </p>
+                        <p>
+                            Tecnologia e precisão para aplicações agrícolas com drones.
+                        </p>
 
-            <div className="socials">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-            </div>
-        </div>
+
+
+                        <div className="footer-social">
+                            <a href="#" aria-label="Facebook">
+                                <img src={facebook} alt="" width={20} height={20} />
+                               
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
 
         <div>
             <h3>Empresa</h3>

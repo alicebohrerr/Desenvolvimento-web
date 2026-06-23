@@ -1,58 +1,78 @@
+/* Estilo de link com cor alternativa */
 .reverse-color {
-  color: var(--primary-color);
+    color: #4b5563; /* cor cinza */
+    font-weight: 700; /* texto em negrito */
 }
 
+/* Efeito hover do link (PRIMEIRA definição) */
 .reverse-color:hover {
-  color: var(--second-text-color);
+    color: #00B814; /* verde ao passar o mouse */
 }
 
+/* Efeito hover do link (SEGUNDA definição) */
+/* essa regra sobrescreve a anterior por estar depois */
+.reverse-color:hover {
+  color: var(--second-text-color); /* usa variável de cor secundária */
+}
+
+/* Classe para margem à direita */
 .ml-lg {
-  margin-right: 2.875rem;
+  margin-right: 2.875rem; /* espaço à direita */
 }
 
+/* Container do menu mobile */
 .mobile-menu {
-  display: initial;
-  z-index: 3;
+  display: initial; /* mantém visível por padrão */
+  z-index: 3; /* fica acima de outros elementos */
 }
 
+/* Conteúdo do menu mobile (overlay) */
 .mobile-menu-content {
-  position: absolute;
+  position: absolute; /* sobrepõe a tela */
   display: flex;
   top: 0;
   left: 0;
   padding-top: 2.25rem;
-  width: 100vw; 
-  height: 100vh;
-  background: var(--bg-color);
+  width: 100vw;  /* ocupa largura total da tela */
+  height: 100vh; /* ocupa altura total da tela */
+  background: var(--bg-color); /* fundo da tela */
 }
 
+/* Lista do menu mobile */
 .mobile-menu-content ul {
-  width: 100%;
+  width: 100%; /* ocupa toda largura */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
+  flex-direction: column; /* itens em coluna */
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center; /* centraliza verticalmente */
+  gap: 4rem; /* espaço entre itens */
 }
 
+/* Links do menu mobile */
 .mobile-menu-content a {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-lg); /* aumenta tamanho da fonte */
 }
 
+/* Estilos para telas grandes */
 @media (width >= 1280px) {
+
+  /* header com controle de empilhamento */
   header {
     position: relative;
     z-index: 1;
   }
 
+  /* garante que a logo apareça no desktop */
   nav > img {
     display: initial;
   }
 
+  /* esconde menu mobile no desktop */
   .mobile-menu {
     display: none;
   }
 
+  /* garante que overlay não apareça no desktop */
   .mobile-menu-content {
     display: none;
   }

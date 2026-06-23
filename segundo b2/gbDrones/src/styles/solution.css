@@ -1,46 +1,57 @@
+/* Seção de soluções */
 #solution {
-    padding-block: 5rem;
+    padding-block: 5rem; /* espaçamento vertical (topo e base) */
 }
 
+/* Cabeçalho da seção */
 #solution header {
-    text-align: center;
-    margin-bottom: 3rem;
+    text-align: center; /* centraliza o texto */
+    margin-bottom: 3rem; /* espaço abaixo do header */
 }
 
+/* Container dos cards de soluções */
 .solutions-cards {
-    margin-top: 3rem;
+    margin-top: 3rem; /* espaço acima dos cards */
 }
 
+/* Card individual de solução */
 .card {
-    background: var(--light-gray);
-    padding: 2rem;
-    border-radius: 1rem;
+    background: white; /* fundo branco */
+    padding: 2rem; /* espaçamento interno */
+    border-radius: 1rem; /* bordas arredondadas */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* flexbox */
+    flex-direction: column; /* organiza em coluna */
+    align-items: center; /* centraliza horizontalmente */
 
-    text-align: center;
+    text-align: center; /* centraliza texto */
 
-    gap: 1rem;
+    gap: 1rem; /* espaço entre elementos */
 
-    box-shadow: rgba(58,68,78,.15) 0px 8px 20px;
+    border-top: 5px solid var(--primary-color); /* destaque superior verde */
 
-    transition: 0.3s;
+    box-shadow: rgba(58,68,78,.15) 0px 8px 20px; /* sombra leve */
+
+    transition: 0.3s; /* animação suave */
 }
 
+/* Efeito ao passar o mouse no card */
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* levanta o card */
+    box-shadow: rgba(0,184,20,.25) 0px 10px 25px; /* sombra verde mais forte */
 }
 
+/* Ícone do card */
 .card-icon {
-    font-size: 3rem;
+    font-size: 3rem; /* aumenta tamanho do ícone */
 }
 
+/* Título do card */
 .card h3 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* cor verde */
 }
 
+/* Texto do card */
 .card p {
-    color: var(--second-text-color);
+    color: var(--second-text-color); /* cor cinza secundária */
 }

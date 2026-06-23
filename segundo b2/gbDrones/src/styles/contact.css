@@ -1,25 +1,30 @@
+/* Seção de contato */
 #contact {
-  padding-block: 4rem;
+  padding-block: 4rem; /* espaçamento vertical (topo e base) da seção */
 }
 
+/* Cabeçalho da seção de contato */
 #contact header {
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: center; /* centraliza o texto */
+  margin-bottom: 2rem; /* espaço abaixo do header */
 }
 
+/* Formulário de contato */
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: flex; /* ativa flexbox */
+  flex-direction: column; /* organiza os itens em coluna */
+  gap: 1rem; /* espaço entre os campos */
 }
 
+/* Estilo dos inputs e textarea */
 .contact-form input,
 .contact-form textarea {
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: .5rem;
+  padding: 1rem; /* espaço interno */
+  border: 1px solid #ddd; /* borda cinza clara */
+  border-radius: .5rem; /* bordas arredondadas */
 }
 
+/* Ajuste específico do textarea */
 .contact-form textarea {
-  min-height: 150px;
+  min-height: 150px; /* altura mínima do campo de mensagem */
 }

@@ -1,74 +1,87 @@
+/* Seção principal (hero/banner) */
 #hero {
     background: linear-gradient(
         135deg,
-        #EFF6FF,
-        #ECFDF5
-    );
+        #F4FFF4,
+        #E8FFE8
+    ); /* gradiente de fundo verde claro */
 
-    border-top: 0.125rem solid #e4e4e4;
-    height: 90vh;
-    display: flex;
+    border-top: 0.125rem solid #e4e4e4; /* linha superior cinza */
+    height: 90vh; /* altura ocupa 90% da tela */
+    display: flex; /* usa flexbox */
 }
+
+/* Imagem principal do hero */
 #hero > img {
-    position: absolute;
-    right: 0;
-    height: 60%;
-    padding-left: 30%;
+    position: absolute; /* posiciona por cima do layout */
+    right: 0; /* encosta na direita */
+    height: 60%; /* altura da imagem */
+    padding-left: 30%; /* espaço à esquerda */
 }
+
+/* Parágrafos dentro do hero */
 #hero p {
-  color: var(--second-text-color);
+  color: var(--second-text-color); /* cor secundária do texto */
 }
+
+/* Conteúdo central do hero */
 #hero .content {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 1.75rem;
-    padding-top: 8rem;
+    z-index: 1; /* fica acima das imagens */
+    display: flex; /* flexbox */
+    flex-direction: column; /* itens em coluna */
+    justify-content: center; /* centraliza verticalmente */
+    text-align: center; /* centraliza texto */
+    gap: 1.75rem; /* espaço entre elementos */
+    padding-top: 8rem; /* espaço no topo */
 }
+
+/* Div dentro do conteúdo do hero (botões) */
 #hero .content > div {
-    width: fit-content;
-    align-self: center;
-    margin-bottom: 20%;
+    width: fit-content; /* tamanho ajusta ao conteúdo */
+    align-self: center; /* centraliza horizontalmente */
+    margin-bottom: 20%; /* espaço inferior */
 }
 
-
-
+/* RESPONSIVIDADE PARA TELAS GRANDES */
 @media (width >= 1280px) {
+
     #hero {
-        background: var(--bg-color);
-        border-top: none;
+        background: var(--bg-color); /* muda fundo no desktop */
+        border-top: none; /* remove borda superior */
 
-> span {
-    position: absolute;
-    top: 0;
-}
+        /* OBS: aqui tem um problema de estrutura CSS (ver nota abaixo) */
 
-> img {
-    top: 0;
-    height: 82%;
-    padding-left: 55%;
-}
+        > span {
+            position: absolute;
+            top: 0;
+        }
+
+        > img {
+            top: 0;
+            height: 82%;
+            padding-left: 55%;
+        }
     }
 }
 
+/* Parágrafos dentro de .content */
 .content p {
-    width: 80%;
-    align-self: center;
+    width: 80%; /* limita largura do texto */
+    align-self: center; /* centraliza */
 }
 
+/* Ajuste geral do conteúdo */
 .content {
-    gap: 2.5rem;
+    gap: 2.5rem; /* espaço entre elementos */
 }
 
+/* Primeiro botão dentro de .content */
 .content > div :first-child {
-    width: 10.625rem;
+    width: 10.625rem; /* largura fixa */
 }
 
+/* Primeiro parágrafo do conteúdo */
 .content p:first-of-type {
-    color: var(--primary-color);
-    font-weight: var(--fw-bold);
+    color: var(--primary-color); /* cor principal */
+    font-weight: var(--fw-bold); /* negrito */
 }
-
-        

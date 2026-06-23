@@ -1,37 +1,40 @@
+/* Estilo do botão principal  cadastre se  */
 .btn-primary {
-    width: 100%;
-    background: var(--primary-color);
-    color: var(--light-text-color);
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-sm);
-    padding-block: 0.825rem;
-    padding-inline: 1.5rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    border: solid transparent 0.15rem;
+    width: 100%; /* botão ocupa toda a largura do container */
+    background: #FFFFFF; /* fundo branco */
+    color: var(--primary-color); /* texto na cor principal do sistema */
+    font-weight: var(--fw-bold); /* texto em negrito */
+    font-size: var(--fs-sm); /* tamanho da fonte pequeno */
+    padding-block: 0.825rem; /* espaçamento vertical interno */
+    padding-inline: 1.5rem; /* espaçamento horizontal interno */
+    border-radius: 0.4rem; /* bordas arredondadas */
+    cursor: pointer; /* cursor de clique ao passar o mouse */
+    border: 2px solid var(--primary-color); /* borda na cor principal */
 }
 
+/* Efeito ao passar o mouse no botão principal */
 .btn-primary:hover {
-    background: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    background: var(--primary-color); /* fundo muda para cor principal */
+    color: #FFFFFF; /* texto fica branco */
 }
 
+/* Estilo do botão secundário */
 .btn-secondary {
-    width: 100%;
-    background: transparent;
-    color: var(--primary-color);
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-sm);
-    padding-block: 0.825rem;
-    padding-inline: 1.5rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    border: solid var(--primary-color) 0.15rem;
+    width: 100%; /* ocupa toda largura */
+    background: transparent; /* fundo transparente */
+    color: var(--primary-color); /* texto na cor principal */
+    font-weight: var(--fw-bold); /* negrito */
+    font-size: var(--fs-sm); /* tamanho da fonte pequeno */
+    padding-block: 0.825rem; /* espaçamento vertical */
+    padding-inline: 1.5rem; /* espaçamento horizontal */
+    border-radius: 0.4rem; /* bordas arredondadas */
+    cursor: pointer; /* cursor de clique */
+    border: solid var(--primary-color) 0.15rem; /* borda fina na cor principal */
 }
 
+/* Efeito ao passar o mouse no botão secundário */
 .btn-secondary:hover {
-    background: var(--primary-color);
-    color: var(--light-text-color);
-    border-color: transparent;
+    background: var(--primary-color); /* fundo muda para cor principal */
+    color: var(--light-text-color); /* texto muda para cor clara */
+    border-color: transparent; /* borda some no hover */
 }

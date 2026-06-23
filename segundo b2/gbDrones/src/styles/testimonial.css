@@ -1,31 +1,51 @@
+/* Seção de depoimentos */
 #testimonials {
-  padding-block: 4rem;
+  padding-block: 4rem; /* espaçamento vertical (topo e base) */
 }
 
+/* Cabeçalho da seção */
 #testimonials header {
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: center; /* centraliza o texto */
+  margin-bottom: 2rem; /* espaço abaixo do header */
 }
 
+/* Container dos cards do carrossel */
 .carousel-content {
-  display: grid;
-  gap: 1.5rem;
+  display: grid; /* usa grid layout */
+  gap: 1.5rem; /* espaço entre os cards */
 }
 
+/* Card de depoimento */
 .carousel-card {
-  background: var(--light-gray);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: rgba(58, 68, 78, 0.15) 0px 6px 12px;
+  background: var(--light-gray); /* fundo cinza claro */
+  padding: 1.5rem; /* espaço interno */
+  border-radius: 1rem; /* bordas arredondadas */
+  box-shadow: rgba(58, 68, 78, 0.15) 0px 6px 12px; /* sombra leve */
 }
 
+/* Nome e cargo da pessoa */
 .names {
-  margin-top: 1rem;
-  font-weight: var(--fw-bold);
+  margin-top: 1rem; /* espaço acima */
+  font-weight: var(--fw-bold); /* texto em negrito */
 }
 
+/* Layout para telas grandes */
 @media (width >= 1280px) {
   .carousel-content {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
   }
+}
+
+/* Imagem do cliente no depoimento */
+.testimonial-image {
+  width: 90px; /* largura fixa */
+  height: 90px; /* altura fixa */
+
+  border-radius: 50%; /* deixa a imagem do produtor redonda */
+  object-fit: cover; /* ajusta a imagem sem distorcer */
+
+  border: 3px solid var(--primary-color); /* borda  da foto verde */
+
+  display: block; /* remove comportamento inline */
+  margin: 0 auto 1rem; /* centraliza e dá espaço abaixo */
 }

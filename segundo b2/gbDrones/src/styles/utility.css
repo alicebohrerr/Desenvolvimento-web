@@ -1,71 +1,91 @@
+/* Padding vertical pequeno */
 .py-base {
     padding-block: var(--py-base);
 }
 
+/* Padding vertical grande */
 .py-lg {
     padding-block: var(--py-lg);
 }
 
+/* Padding vertical extra grande */
 .py-xl {
     padding-block: var(--py-xl);
 }
 
+/* Padding horizontal grande */
 .px-lg {
     padding-inline: var(--px-lg);
 }
 
+/* Elementos visíveis apenas no desktop (inicialmente escondidos) */
 .desktop-only {
     display: none;
 }
 
+/* Layout em colunas iguais */
 .even-columns {
     display: grid;
-    gap: 1rem;
+    gap: 1rem; /* espaço entre colunas */
 }
 
+/* Alinhamento vertical central */
 .items-center {
     align-items: center;
 }
+
+/* Espaço entre elementos nas extremidades */
 .justify-between {
     justify-content: space-between;
 }
 
+/* Flexbox */
 .flex {
     display: flex;
 }
 
+/* Grid layout */
 .grid {
     display: grid;
 }
 
+/* Espaço pequeno */
 .gap-1 {
     gap: 1rem;
 }
 
+/* Espaço médio */
 .gap-1\.5 {
     gap: 1.5rem;
 }
 
+/* Wrapper de botão (área clicável) */
 .btn-wrapper {
-    cursor: pointer;
-    padding: 2px;
+    cursor: pointer; /* cursor de clique */
+    padding: 2px; /* pequeno espaçamento interno */
 }
 
+/* Container centralizado do site */
 .container {
-    --max-width: 680px;
-    width: min(var(--max-width), 100% - var(--px-lg) * 2);
-    margin-inline: auto;
+    --max-width: 680px; /* largura máxima padrão */
+    width: min(var(--max-width), 100% - var(--px-lg) * 2); /* responsivo */
+    margin-inline: auto; /* centraliza horizontalmente */
 }
 
+/* Ajustes para telas grandes */
 @media (width >= 1280px) {
+
+    /* aumenta largura máxima do container no desktop */
     .container {
         --max-width: 1050px;
     }
 
+    /* mostra elementos que antes eram escondidos */
     .desktop-only {
         display: initial;
     }
 
+    /* muda layout de grid para colunas horizontais */
     .even-columns {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;

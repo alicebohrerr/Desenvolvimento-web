@@ -1,37 +1,50 @@
+/* Aplica box-sizing em todos os elementos e pseudo-elementos */
+/* Faz com que padding e border não aumentem o tamanho do elemento */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Reset geral de estilos */
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    margin: 0; /* remove margem padrão */
+    padding: 0; /* remove padding padrão */
+    font: inherit; /* herda fonte do elemento pai */
+    -webkit-font-smoothing: antialiased; /* melhora suavização no Chrome/Safari */
+    -moz-osx-font-smoothing: grayscale; /* melhora suavização no Firefox */
 }
 
+/* Variáveis globais do projeto */
 :root {
-    --bg-color: #FFF;
-    --text-color: #252B42;
-    --second-text-color: #737373;
-    --light-text-color: #FFF;
-    --light-gray: #F8F8F8;
-    --primary-color: #23A6F0;
-    --secondary-color: #B2E3FF;
 
+    /* cores principais do sistema */
+    --bg-color: #FFFFFF; /* fundo */
+    --text-color: #0F3D1F; /* texto principal */
+    --second-text-color: #4B5563; /* texto secundário */
+
+    --light-text-color: #FFFFFF; /* texto claro */
+    --light-gray: #F5F7F5; /* cinza claro */
+
+    --primary-color: #00B814; /* cor principal (verde) */
+    --secondary-color: #A7F3A0; /* cor secundária */
+
+    /* fonte */
     --ff-sans: "Montserrat", system-ui, sans-serif;
+
+    /* pesos de fonte */
     --fw-base: 400;
     --fw-md: 500;
     --fw-bold: 800;
 
+    /* tamanhos de fonte */
     --fs-sm: 0.875rem;
     --fs-base: 1rem;
     --fs-lg: 1.25rem;
     --fs-xl: 1.75rem;
     --fs-2xl: 2.25rem;
 
+    /* espaçamentos verticais e horizontais */
     --py-sm: 0.875rem;
     --py-base: 1rem;
     --py-lg: 1.5rem;
@@ -39,70 +52,85 @@
     --px-lg: 1.5rem;
 }
 
+/* Estilo base do HTML */
 html {
-    font-family: var(--ff-sans);
-    font-weight: var(--fw-base);
-    font-size: var(--fs-base);
-    line-height: 1.6;
-    color: var(--text-color);
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    font-family: var(--ff-sans); /* fonte padrão */
+    font-weight: var(--fw-base); /* peso normal */
+    font-size: var(--fs-base); /* tamanho base da fonte */
+    line-height: 1.6; /* espaçamento entre linhas */
+    color: var(--text-color); /* cor padrão do texto */
+    overflow-x: hidden; /* evita scroll horizontal */
+    scroll-behavior: smooth; /* rolagem suave */
 }
 
+/* Estilo geral do body */
 body {
-    background-color: var(--bg-color);
-    overflow-x: hidden;
+    background-color: var(--bg-color); /* fundo branco */
+    overflow-x: hidden; /* evita scroll horizontal */
 }
 
+/* Títulos */
 h1, h2, h3 {
-    line-height: 1.2;
-    color: var(--text-color);
-    font-weight: var(--fw-bold);
-    letter-spacing: -0.04em;
+    line-height: 1.2; /* altura da linha reduzida */
+    color: var(--text-color); /* cor padrão */
+    font-weight: var(--fw-bold); /* negrito */
+    letter-spacing: -0.04em; /* aproxima letras */
 }
 
+/* Título principal */
 h1 {
     font-size: var(--fs-2xl);
 }
 
+/* Subtítulo */
 h2 {
     font-size: var(--fs-xl);
 }
 
+/* Título menor */
 h3 {
     font-size: var(--fs-lg);
 }
 
+/* Links */
 a {
-    text-decoration: none;
-    color: var(--second-text-color);
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-sm);
+    text-decoration: none; /* remove sublinhado */
+    color: var(--second-text-color); /* cor padrão */
+    font-weight: var(--fw-bold); /* negrito */
+    font-size: var(--fs-sm); /* tamanho pequeno */
 }
 
+/* Hover dos links */
 a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* muda para verde */
 }
 
+/* Imagens responsivas */
 img {
-    max-width: 100%;
+    max-width: 100%; /* não ultrapassa o container */
     display: inline-block;
 }
 
+/* Remove bolinhas de listas */
 ul {
     list-style: none;
 }
 
+/* Ajustes para telas grandes */
 @media (width >= 1280px) {
     :root {
+        /* aumenta tamanhos de fonte no desktop */
         --fs-lg: 2rem;
         --fs-xl: 2.625rem;
         --fs-2xl: 4rem;
 
+        /* aumenta espaçamentos no desktop */
         --py-sm: 1rem;
         --py-base: 1.5rem;
         --py-lg: 2.5rem;
         --py-xl: 5rem;
-        --pg-lg: 2rem;
+
+        /* OBS: provável erro de digitação aqui */
+        --pg-lg: 2rem; /* provavelmente era --px-lg */
     }
 }

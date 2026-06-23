@@ -1,51 +1,61 @@
+/* Estilo geral do footer */
 .footer {
-    background: var(--text-color);
-    color: var(--light-text-color);
-    margin-top: 5rem;
+    background: #0F3D1F; /* fundo verde escuro */
+    color: var(--light-text-color); /* cor do texto clara */
+    margin-top: 5rem; /* espaço acima do footer */
 }
 
+/* Conteúdo principal do footer */
 .footer-content {
-    display: grid;
-    gap: 2rem;
-    padding-block: 3rem;
+    display: grid; /* usa grid para organizar colunas */
+    gap: 2rem; /* espaço entre os blocos */
+    padding-block: 3rem; /* espaçamento vertical interno */
 }
 
+/* Títulos dentro do footer */
 .footer h3 {
-    color: var(--light-text-color);
-    margin-bottom: 1rem;
+    color: var(--light-text-color); /* garante cor clara no título */
+    margin-bottom: 1rem; /* espaço abaixo do título */
 }
 
+/* Remove estilo padrão da lista */
 .footer ul {
-    list-style: none;
+    list-style: none; /* tira marcadores */
 }
 
+/* Espaçamento entre itens da lista */
 .footer ul li {
-    margin-bottom: .75rem;
+    margin-bottom: .75rem; /* espaço entre links */
 }
 
+/* Links do footer */
 .footer a {
-    color: #d9d9d9;
-    text-decoration: none;
+    color: #d9d9d9; /* cor cinza clara */
+    text-decoration: none; /* remove sublinhado */
 }
 
+/* Efeito hover nos links */
 .footer a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* muda para cor principal ao passar o mouse */
 }
 
+/* Área das redes sociais */
 .socials {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    display: flex; /* coloca itens lado a lado */
+    gap: 1rem; /* espaço entre ícones/links */
+    margin-top: 1rem; /* espaço acima */
 }
 
+/* Parte inferior do footer (copyright) */
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,.2);
-    text-align: center;
-    padding: 1rem;
+    border-top: 1px solid rgba(255,255,255,.2); /* linha separando conteúdo */
+    text-align: center; /* centraliza texto */
+    padding: 1rem; /* espaçamento interno */
 }
 
+/* Responsividade para telas grandes */
 @media (width >= 1280px) {
     .footer-content {
-        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr 1fr; /* layout em colunas no desktop */
     }
 }
