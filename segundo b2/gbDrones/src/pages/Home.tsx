@@ -164,7 +164,8 @@ async function sendContactEmail() {
             rápidas e precisas.
         </p>
     </header>
-    
+
+    <section className="even-columns">
 <Card
     icon="🚁"
     title="Aplicação de Defensivos"
@@ -182,6 +183,7 @@ async function sendContactEmail() {
     title="Análise de Dados"
     description="Monitoramento da lavoura com informações precisas para auxiliar na tomada de decisões."
 />
+</section>
 </section>
 
 <section id="testimonials">
