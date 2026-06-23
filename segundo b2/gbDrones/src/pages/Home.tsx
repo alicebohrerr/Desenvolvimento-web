@@ -25,11 +25,9 @@ import Card from "../components/card";
 
 export default function Home() {
     
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
-
-    // Valores para capturar dados dos inputs
-const [email, setEmail] = useState("");
-const [message, setMessage] = useState("");
+    const [showMobileMenu, setShowMobileMenu] = useState(false); 
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
 async function sendContactEmail() {
   const response = await fetch("/api/send-email", {
@@ -333,13 +331,25 @@ async function sendContactEmail() {
         <input
             type="email"
             placeholder="Seu e-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
         />
 
         <textarea
             placeholder="Descreva sua necessidade"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
         />
 
-        <Button text="Enviar" />
+        <span>
+       <button
+    className="btn-primary"
+    onClick={sendContactEmail}
+>
+    Enviar Mensagem
+</button>
+        </span>
+        
 
     </form>
 
